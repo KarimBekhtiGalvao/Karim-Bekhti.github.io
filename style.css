@@ -1,61 +1,84 @@
-/* Global styles */
 body {
   margin: 0;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #0a192f;
   color: #ccd6f6;
-  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Hero section */
-.hero {
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left, .right {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 0 20px;
-  text-align: left;
+  padding: 40px;
 }
 
-.content {
-  max-width: 800px;
+.left {
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .intro {
   color: #64ffda;
-  font-size: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .name {
   font-size: 3rem;
-  color: #ffffff;
+  color: #fff;
   margin: 0;
 }
 
 .subtitle {
   font-size: 2rem;
   color: #8892b0;
-  margin: 10px 0 20px;
+  margin: 12px 0;
 }
 
 .description {
-  max-width: 600px;
-  font-size: 1.1rem;
+  max-width: 500px;
   color: #8892b0;
-  line-height: 1.6;
+  line-height: 1.5;
+  margin-bottom: 30px;
 }
 
 .cta {
-  display: inline-block;
-  margin-top: 30px;
   padding: 12px 24px;
   border: 1px solid #64ffda;
   color: #64ffda;
   text-decoration: none;
   border-radius: 4px;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 .cta:hover {
   background-color: rgba(100, 255, 218, 0.1);
+}
+
+.right {
+  background-color: #112240;
+  color: #64ffda;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.sliding-text {
+  animation: slideText 3s infinite;
+}
+
+@keyframes slideText {
+  0%   { opacity: 0; transform: translateY(20px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  40%  { opacity: 1; transform: translateY(0); }
+  50%  { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 0; }
 }
