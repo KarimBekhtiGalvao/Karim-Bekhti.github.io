@@ -1,8 +1,9 @@
-const roles = ["Developer", "Engineer", "Designer", "Problem Solver"];
-let index = 0;
-const el = document.getElementById("sliding-text");
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('nav-toggle');
+  const sidebar = document.getElementById('sidebar');
 
-setInterval(() => {
-  index = (index + 1) % roles.length;
-  el.textContent = roles[index];
-}, 3000);
+  toggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+});
