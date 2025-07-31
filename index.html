@@ -2,24 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Background with Top Screen</title>
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
+      display: flex;
+      justify-content: center;
+      background: #000;
     }
 
-    body {
-      background-image: url("MyImages/Home.png"); /* change path if needed */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6); /* translucent black overlay */
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
   </style>
 </head>
 <body>
+  <div class="image-container">
+    <div class="screen">
+      <h1>Welcome to My Website</h1>
+      <p>This text appears over the top of the image.</p>
+    </div>
+    <img src="MyImages/Home.png" alt="Background">
+  </div>
 </body>
 </html>
