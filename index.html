@@ -9,40 +9,20 @@
       margin: 0;
       background-color: #1a1d21;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
+      padding: 2rem;
     }
 
-    .image-stack {
-      position: relative;
-      width: 80%;
-      max-width: 800px;
-    }
-
-    .image-stack img {
-      width: 100%;
+    img {
+      max-width: 100%;
       height: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-    }
-
-    .image-stack .bottom-img {
-      z-index: 0;
-    }
-
-    .image-stack .top-img {
-      z-index: 1;
-      opacity: 0.6; /* adjust for blending */
+      margin-bottom: 2rem; /* space between the two */
     }
   </style>
 </head>
 <body>
-  <div class="image-stack">
-    <img src="images/home1.png" alt="Base Image" class="bottom-img">
-    <img src="images/home2.png" alt="Top Image" class="top-img">
-  </div>
+  <img src="images/home1.png" alt="Home Image 1">
+  <img src="images/home2.png" alt="Home Image 2">
 </body>
 </html>
